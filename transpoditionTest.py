@@ -26,5 +26,5 @@ def main():
 
 	print("Transpportation cipher test passed.")
 
-	if __name__ == '__main__':
-		main()
+if __name__ == '__main__':
+	main()
