@@ -18,11 +18,12 @@ def main():
     print('%sed text:'%(mode.title()))
     print(translated)
 
+#splitting one key into two keys
 def getKeyParts(key):
     keyA = key//len(SYMBOLS)
-    keyB key%len(SYMBOLS)
+    keyB = key%len(SYMBOLS)
 
-    return (keyA, keyB)
+    return (keyA, keyB) #tuple va;ue os similar to a list:it is a value that can store other value
 
 def checkKeys(keyA, keyB, mode):
     if keyA == 1 and mode == 'encrypt':
