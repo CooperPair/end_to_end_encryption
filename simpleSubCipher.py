@@ -8,10 +8,10 @@ LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def main():
     myMessage = 'If a man is offered a fact which goes against his instincts, he will scrutinize it closely, and unless the evidence is overwhelming, he will refuse to believe it. If, on the other hand, he is offered something which affords a reason for acting in accordance to his instincts, he will accept it even on the slightest evidence. The origin of myths is explained in this way. -Bertrand Russell'
-    myKey = 'LFWOAYUISVKMNXPBDCRJTQEGHZ'
+    myKey = 'LFWOAYUISVKMNXPBDCRJTQEGHZ' # total 26! factorial key can be arrangeed from this thing so it is good method
     myMode = 'encrypt' # set to 'encrypt' or 'decrypt'
 
-    checkValidKey(myKey)
+    checkValidKey(myKey) # to check whether the key is correct or wrong
 
     if myMode == 'encrypt':
         translated = encryptMessage(myKey, myMessage)
@@ -43,20 +43,20 @@ def decryptMessage(key, message):
 
 
 def translateMessage(key, message, mode):
-    translated = ''
+    translated = '' # blank string that later will be filled
     charsA = LETTERS
     charsB = key
     if mode == 'decrypt':
         # For decrypting, we can use the same code as encrypting. We
         # just need to swap where the key and LETTERS strings are used.
-        charsA, charsB = charsB, charsA
+        charsA, charsB = charsB, charsA  #sweapping the letters and key
 
     # loop through each symbol in the message
     for symbol in message:
         if symbol.upper() in charsA:
             # encrypt/decrypt the symbol
-            symIndex = charsA.find(symbol.upper())
-            if symbol.isupper():
+            symIndex = charsA.find(symbol.upper()) # find the index number of the key digit
+            if symbol.isupper():# it retruns true if string has atleast in euppercase letters or it does not have any lower case letter
                 translated += charsB[symIndex].upper()
             else:
                 translated += charsB[symIndex].lower()
