@@ -14,3 +14,27 @@ First, Bob uses Alice’s public key to encrypt the message, turning “Hello Al
 
 Bob sends this encrypted message over the public internet. Along the way, it may pass through multiple servers, including those belonging to the email service they’re using and to their internet service providers. Although those companies may try to read the message (or even share them with third parties), it is impossible for them to convert the ciphertext back into readable plaintext. Only Alice can do that with her private key when it lands in her inbox, as Alice is the only person that has access to her private key. When Alice wants to reply, she simply repeats the process, encrypting her message to Bob using Bob’s public key.
 
+# cipher in encryption
+
+A cipher (or cypher) is an algorithm for performing encryption or decryption—a series of well-defined steps that can be followed as a procedure. An alternative, less common term is encipherment. To encipher or encode is to convert information into cipher or code. In common parlance, "cipher" is synonymous with "code", as they are both a set of steps that encrypt a message; however, the concepts are distinct in cryptography, especially classical cryptography.(source wikipedia)
+
+# some of the ciphers techniques are :
+
+1. atbash cipher
+2. Caesar cipher
+3. Affine cipher
+4. Simple sunstitution cipher
+5. Baconian cipher
+6. Vigenere cipher
+7. Rail-fence cipher and many more ...
+
+# how to run any code 
+
+>> Just type in command shell :
+```
+      foo@bar: python filename.py
+```
+>> for example :
+```
+      foo@bar : python vigenere.py
+```
